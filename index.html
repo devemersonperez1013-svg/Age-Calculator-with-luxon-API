@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculador de idade 📅</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>Calculador de Idade 📅</h1>
+        <p>Calcule sua idade colocando seu dia, mês, e ano de nascimento!</p>
+    </header>
+
+    <main id="container">
+        <form class="form-age-calc" autocomplete="off">
+            <label for="birth">Digite sua data de nascimento:</label>
+            <div class="form-operation">
+                <input name="birth" id="birth" class="input-date" placeholder="Selecione seu nascimento...">
+                <button id="calc-btn">Cacular</button>
+            </div>
+        </form>
+
+        <section id="result-calc" hidden>
+            <p id="result-p">---</p>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.7.2/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

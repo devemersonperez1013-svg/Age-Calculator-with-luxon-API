@@ -1,0 +1,174 @@
+/* Google Fonts: Stack Sans Headline, Google Sans Flex */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&family=Stack+Sans+Headline:wght@200..700&display=swap');
+
+/* =====================================
+        1. Settings
+========================================*/
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+:root {
+    --b-color-linear-1: #112E81;
+    --b-color-linear-2: #4647AE;
+    --text-theme: "Stack Sans Headline", sans-serif;
+    --text-paraghaph: "Google Sans Flex", sans-serif;
+    --f-size-small: 1.1rem;
+}
+
+body {
+    background-image: url("https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"), linear-gradient(140deg, var(--b-color-linear-1) 0%, var(--b-color-linear-2) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: var(--text-paraghaph);
+}
+
+/* =====================================
+        2. Header
+========================================*/
+
+header {
+    color: #fff;
+    font-size: var(--f-size-small);
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+header h1 {
+    font-family: var(--text-theme);
+}
+
+/* =====================================
+        3. Container
+========================================*/
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--f-size-small);
+}
+
+/* =====================================
+        4. Form
+========================================*/
+
+.form-age-calc {
+    padding: 3rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.43);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.9px);
+}
+
+.form-age-calc label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #494949;
+}
+
+.form-operation {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+}
+
+/* !Concerta esse erro do input! */
+.form-operation .input-date {
+    padding: 0.7rem 0.8rem;
+    background-color: #FFFAF3;
+    border-radius: 1rem;
+    border: 2px solid #112E81;
+    font-size: 1.1rem;
+    flex: 1;
+    min-width: 220px;
+}
+
+
+.form-operation #calc-btn {
+    padding: 1rem;
+    margin-left: 5px;
+    border-radius: 1.1rem;
+    background-color: #4382DF;
+    cursor: pointer;
+    border: none;
+    font-size: 1.1rem;
+}
+
+.form-operation #calc-btn:hover {
+    background-color: #3a6dbb;
+    color: #e8e8e8;
+}
+
+#result-calc {
+    color: #000;
+    border: 1px solid rgba(255, 255, 255, 0.43);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.9px);
+    padding: 1rem;
+    border-radius: 1.1rem;
+    font-weight: bold;
+    animation: slide-in-top 0.4s;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+#result-calc #result-p {
+    background-color: #cccccc5d;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    color: #070707;
+}
+
+@media (max-width: 768px) {
+    .form-age-calc {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .form-operation {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .form-operation .input-date {
+        margin-bottom: 10px;
+        min-width: 100%;
+    }
+
+    #result-calc {
+        width: 80%;
+        text-align: center;
+    }
+}
