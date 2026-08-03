@@ -19,3 +19,6 @@ Este projeto foi desenvolvido como parte da minha jornada dev focado em front-en
 - Integrar biblioteca de terceiros via CDN
 - Fazer boas práticas de formulários e validação de input
 - Pegar a lógica do cálculo de diferença entre datas
+
+## Inspiração do projeto:
+https://roadmap.sh/projects/age-calculator
